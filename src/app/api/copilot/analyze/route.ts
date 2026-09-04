@@ -1,12 +1,12 @@
 import { NextResponse } from 'next/server';
 import Groq from 'groq-sdk';
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY,
-});
-
 export async function POST(request: Request) {
   try {
+    // Instantiate Groq inside the handler to prevent build-time errors if env vars are missing
+    const groq = new Groq({
+      apiKey: process.env.GROQ_API_KEY || 'missing-key',
+    });
     const { products, intent } = await request.json();
 
     if (!products || products.length < 2) {
