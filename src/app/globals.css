@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface: #fff8f5;
+  --color-on-surface: #1f1b17;
+  --color-on-surface-variant: #4d4540;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #fcf2eb;
+  --color-surface-container: #f6ece6;
+  --color-surface-container-high: #f0e6e0;
+  --color-surface-container-highest: #eae1da;
+  
+  --color-primary: #000000;
+  --color-on-primary: #ffffff;
+  
+  --color-secondary: #b81059;
+  --color-on-secondary: #ffffff;
+  --color-secondary-fixed: #ffd9e0;
+  
+  --color-outline: #7e7570;
+  --color-outline-variant: #d0c4be;
+
+  --spacing-space-3xs: 0.125rem;
+  --spacing-space-2xs: 0.25rem;
+  --spacing-space-xs: 0.5rem;
+  --spacing-space-sm: 0.75rem;
+  --spacing-space-md: 1rem;
+  --spacing-space-lg: 1.5rem;
+  --spacing-space-xl: 2rem;
+  --spacing-space-2xl: 3rem;
+  --spacing-space-3xl: 4rem;
+  --spacing-space-4xl: 6rem;
+  --spacing-gutter-mobile: 1rem;
+  --spacing-gutter-desktop: 1.5rem;
+  
+  --font-body-md: 'Hanken Grotesk', sans-serif;
+  
+  --text-body-md: 14px;
+  --text-body-md--line-height: 22px;
+  --text-label-md: 13px;
+  --text-label-caps: 11px;
+  --text-headline-xl: 36px;
+  --text-headline-sm: 16px;
+  --text-headline-md: 20px;
+}
+
+@layer base {
+  html, body {
+    margin: 0;
+    padding: 0;
+    @apply bg-surface text-on-surface font-body-md text-body-md antialiased min-h-screen;
+    overscroll-behavior: none;
+  }
+}
